@@ -18,12 +18,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         if (movementInput != Vector2.zero) {
@@ -32,7 +26,6 @@ public class PlayerController : MonoBehaviour
                 movementFilter,
                 CastCollisions,
                 movespeed * Time.fixedDeltaTime + collisionOffset);
-                
         }
     }
 
